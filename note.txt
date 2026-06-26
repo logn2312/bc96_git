@@ -1,0 +1,20 @@
+git config --global user.name ""
+git config --global user.email ""
+git init: thông báo sẽ git cho folder này - 1 lần / dự án
+
+git remote add origin link_den_repo_git: kết nối folder local với repo git
+git remote -v: kiểm tra lại thông tin
+
+file màu xanh: file mới tạo
+u: untracked 
+A:
+
+-- đẩy code lên github
+git add .
+git commit -m "comment"
+git push
+    lần đầu push
+    git push -u origin main/master
+
+    lần khác
+    git push
