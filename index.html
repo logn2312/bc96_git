@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bài tập mảng - Buổi 7</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="page">
+            <!-- Ghi chú đầu trang -->
+            <div class="note-box">
+                <p>
+                    <strong>❗ Đây chỉ là gợi ý</strong> nên người làm có thể làm khác gợi ý, miễn đúng theo yêu cầu
+                    trong file đề bài
+                </p>
+            </div>
+
+            <div class="accordion">
+                <!-- Bài 1 -->
+                <details class="exercise">
+                    <summary><span class="badge">1</span> Tổng số dương</summary>
+                    <div class="exercise-body">
+                        <p class="hint">💡 Gợi ý: duyệt mảng, nếu phần tử &gt; 0 thì cộng dồn vào biến tổng.</p>
+                        <div class="input-row">
+                            <input type="text" id="input1" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap1()">Tính</button>
+                        </div>
+                        <p class="result" id="result1"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 2 -->
+                <details class="exercise">
+                    <summary><span class="badge">2</span> Đếm số dương</summary>
+                    <div class="exercise-body">
+                        <p class="hint">💡 Gợi ý: duyệt mảng, nếu phần tử &gt; 0 thì tăng biến đếm lên 1.</p>
+                        <div class="input-row">
+                            <input type="text" id="input2" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap2()">Tính</button>
+                        </div>
+                        <p class="result" id="result2"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 3 -->
+                <details class="exercise">
+                    <summary><span class="badge">3</span> Tìm số nhỏ nhất</summary>
+                    <div class="exercise-body">
+                        <p class="hint">
+                            💡 Gợi ý: giả sử phần tử đầu tiên là nhỏ nhất, so sánh với các phần tử còn lại để cập
+                            nhật.
+                        </p>
+                        <div class="input-row">
+                            <input type="text" id="input3" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap3()">Tính</button>
+                        </div>
+                        <p class="result" id="result3"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 4 -->
+                <details class="exercise">
+                    <summary><span class="badge">4</span> Tìm số dương nhỏ nhất</summary>
+                    <div class="exercise-body">
+                        <p class="hint">
+                            💡 Gợi ý: tạo mảng mới chỉ chứa số dương, rồi tìm số nhỏ nhất trong mảng mới đó (nhớ kiểm
+                            tra mảng mới có phần tử hay không).
+                        </p>
+                        <div class="input-row">
+                            <input type="text" id="input4" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap4()">Tính</button>
+                        </div>
+                        <p class="result" id="result4"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 5 -->
+                <details class="exercise">
+                    <summary><span class="badge">5</span> Tìm số chẵn cuối cùng</summary>
+                    <div class="exercise-body">
+                        <p class="hint">
+                            💡 Gợi ý: tạo biến lưu số chẵn cuối cùng, duyệt mảng, mỗi lần gặp số chẵn thì gán vào biến
+                            đó.
+                        </p>
+                        <div class="input-row">
+                            <input type="text" id="input5" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap5()">Tính</button>
+                        </div>
+                        <p class="result" id="result5"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 6 -->
+                <details class="exercise">
+                    <summary><span class="badge">6</span> Đổi chỗ</summary>
+                    <div class="exercise-body">
+                        <p class="hint">
+                            💡 Gợi ý: dùng một biến tạm để giữ giá trị phần tử thứ nhất, rồi gán qua gán lại để đổi
+                            chỗ hai phần tử theo vị trí.
+                        </p>
+                        <div class="input-row">
+                            <input type="text" id="input6" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                        </div>
+                        <div class="input-row">
+                            <input type="number" id="viTri1" placeholder="Vị trí 1" class="small" />
+                            <input type="number" id="viTri2" placeholder="Vị trí 2" class="small" />
+                            <button onclick="baiTap6()">Đổi chỗ</button>
+                        </div>
+                        <p class="result" id="result6"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 7 -->
+                <details class="exercise">
+                    <summary><span class="badge">7</span> Sắp xếp tăng dần</summary>
+                    <div class="exercise-body">
+                        <p class="hint">
+                            💡 Gợi ý: dùng 2 vòng lặp lồng nhau (sắp xếp nổi bọt), so sánh 2 phần tử liền kề, nếu
+                            phần tử trước lớn hơn phần tử sau thì đổi chỗ.
+                        </p>
+                        <div class="input-row">
+                            <input type="text" id="input7" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap7()">Sắp xếp</button>
+                        </div>
+                        <p class="result" id="result7"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 8 -->
+                <details class="exercise">
+                    <summary><span class="badge">8</span> Tìm số nguyên tố đầu tiên</summary>
+                    <div class="exercise-body">
+                        <p class="hint">
+                            💡 Gợi ý: duyệt từng phần tử, kiểm tra có phải số nguyên tố không, nếu đúng thì dùng
+                            <code>break</code> để dừng vòng lặp ngay.
+                        </p>
+                        <div class="input-row">
+                            <input type="text" id="input8" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap8()">Tính</button>
+                        </div>
+                        <p class="result" id="result8"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 9 -->
+                <details class="exercise">
+                    <summary><span class="badge">9</span> Đếm số nguyên</summary>
+                    <div class="exercise-body">
+                        <p class="hint">
+                            💡 Gợi ý: dùng <code>Number.isInteger(phanTu)</code> để kiểm tra một phần tử có phải số
+                            nguyên hay không.
+                        </p>
+                        <div class="input-row">
+                            <input type="text" id="input9" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap9()">Tính</button>
+                        </div>
+                        <p class="result" id="result9"></p>
+                    </div>
+                </details>
+
+                <!-- Bài 10 -->
+                <details class="exercise">
+                    <summary><span class="badge">10</span> So sánh số lượng số âm và dương</summary>
+                    <div class="exercise-body">
+                        <p class="hint">💡 Gợi ý: đếm số lượng số âm, đếm số lượng số dương, rồi so sánh 2 biến đếm đó với nhau.</p>
+                        <div class="input-row">
+                            <input type="text" id="input10" placeholder="Nhập mảng số, cách nhau bởi dấu phẩy" />
+                            <button onclick="baiTap10()">So sánh</button>
+                        </div>
+                        <p class="result" id="result10"></p>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
